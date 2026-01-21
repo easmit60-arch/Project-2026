@@ -21,9 +21,10 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--light-bg) 0%, #f8e8ff 100%);
-  color: var(--text-dark);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
   transition: background 0.3s ease;
 }
 
@@ -106,6 +107,11 @@ h2, h3, h4, h5, h6 {
   color: var(--dark-purple);
 }
 
+h1,
+h2 {
+  font-weight: 600;
+}
+
 html[data-theme="dark"] h2,
 html[data-theme="dark"] h3,
 html[data-theme="dark"] h4,
@@ -172,15 +178,33 @@ html[data-theme="dark"] .nav-list a:focus-visible {
 
 .contact-photo {
   margin: 2rem auto;
-  max-width: 220px;
   width: 100%;
+  max-width: 250px;
   height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 768px) {
+  .contact-photo {
+    max-width: 220px;
+  }
 }
 
 @media (max-width: 600px) {
   .contact-photo {
     max-width: 180px;
   }
+}
+
+@media (max-width: 480px) {
+  .contact-photo {
+    max-width: 150px;
+  }
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
 .contact-photo img {
@@ -194,10 +218,10 @@ html[data-theme="dark"] .nav-list a:focus-visible {
 }
 
 .social-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
-  gap: 1rem;
-  max-width: 360px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -207,14 +231,9 @@ html[data-theme="dark"] .nav-list a:focus-visible {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  padding: 0.75rem;
+  font-size: 2.5rem;
+  padding: 1rem;
   border-radius: 50%;
-  color: var(--dark);
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.social-links a {
   color: var(--dark-purple);
   transition: all 0.3s ease;
 }
@@ -248,4 +267,41 @@ html[data-theme="dark"] .social-links a:focus-visible {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Layout spacing and flex hero */
+section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accent {
+  color: #c0392b;
+}
+
+/* Navigation layout and hover */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #c0392b;
 }
