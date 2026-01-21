@@ -21,7 +21,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #ffc0e3 0%, #ffb3d9 50%, #ffa6cf 100%);
+  box-shadow: inset 0 0 60px rgba(255, 182, 219, 0.6);
   color: #222;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
@@ -40,6 +41,26 @@ main {
   margin: 0 auto;
 }
 
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 section {
   text-align: center;
   margin: 2rem auto;
@@ -48,15 +69,42 @@ section {
   border-radius: 12px;
 }
 
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background-color: #feaef2;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
 #hero {
-  background: rgba(255, 107, 255, 0.05);
+  background: rgba(239, 107, 239, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 107, 255, 0.1);
+  border: 1px solid rgba(154, 117, 154, 0.1);
   margin-top: 2rem;
 }
 
 html[data-theme="dark"] #hero {
-  background: rgba(0, 255, 255, 0.05);
+  background: rgba(37, 90, 90, 0.05);
   border: 1px solid rgba(0, 255, 255, 0.1);
 }
 
@@ -209,7 +257,7 @@ img {
 
 .contact-photo img {
   width: 100%;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .contact-text {
@@ -234,7 +282,7 @@ img {
   font-size: 2.5rem;
   padding: 1rem;
   border-radius: 50%;
-  color: var(--dark-purple);
+  color: var(--dark-pink);
   transition: all 0.3s ease;
 }
 
