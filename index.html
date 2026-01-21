@@ -58,53 +58,61 @@
       </a>
     </section>
 
-    <!-- ====== ABOUT ====== -->
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
+    <div class="info-grid" aria-label="About, Skills, and Projects">
 
-      <p>
-        I am a multidisciplinary artist and activist whose work blends
-        performance, design, and digital storytelling. My practice centers
-        consent, accessibility, and joy as tools for liberation.
-      </p>
+      <!-- ====== ABOUT ====== -->
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
 
-      <p>
-        Through vaudeville, web development, and community organizing,
-        I create spaces where people can be seen, heard, and invited into
-        meaningful connection.
-      </p>
-    </section>
-
-    <!-- ====== SKILLS ====== -->
-    <section id="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-
-      <ul class="skills-list">
-        <li>Semantic HTML & Accessible Markup</li>
-        <li>CSS (Grid, Responsive Design)</li>
-        <li>Visual & Interaction Design</li>
-        <li>Performance & Embodied Storytelling</li>
-        <li>Community Organizing & Facilitation</li>
-      </ul>
-    </section>
-
-    <!-- ====== PROJECTS ====== -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-
-      <article class="project-card">
-        <h3>Project Title</h3>
         <p>
-          Short description of the project, what problem it addressed,
-          and how it reflects your values or skills.
+          I am a multidisciplinary artist and activist whose work blends
+          performance, design, and digital storytelling. My practice centers
+          consent, accessibility, and joy as tools for liberation.
         </p>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          View Project
-        </a>
-      </article>
 
-      <!-- Duplicate project-card for more projects -->
-    </section>
+        <p>
+          Through vaudeville, web development, and community organizing,
+          I create spaces where people can be seen, heard, and invited into
+          meaningful connection.
+        </p>
+      </section>
+
+      <!-- ====== SKILLS ====== -->
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+
+        <ul class="skills-list">
+          <li>Semantic HTML & Accessible Markup</li>
+          <li>CSS (Grid, Responsive Design)</li>
+          <li>Visual & Interaction Design</li>
+          <li>Performance & Embodied Storytelling</li>
+          <li>Community Organizing & Facilitation</li>
+        </ul>
+      </section>
+
+      <!-- ====== PROJECTS ====== -->
+      <section id="projects" class="section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <div class="card-container" role="list">
+          <article class="card" role="listitem">
+            <h3>Project One</h3>
+            <p>Short description of the project.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3>Project Two</h3>
+            <p>Short description of the project.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3>Project Three</h3>
+            <p>Short description of the project.</p>
+          </article>
+        </div>
+      </section>
+
+    </div>
 
     <!-- ====== CONTACT ====== -->
     <section id="contact" aria-labelledby="contact-heading" class="contact-section">
@@ -176,3 +184,13 @@
 
 </body>
 </html>
+
+<style>
+  section {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  border-radius: 12px;
+}
+</style>
