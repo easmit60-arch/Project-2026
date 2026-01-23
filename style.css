@@ -363,9 +363,8 @@ nav a:hover {
 
 .scroll-container {
   max-height: 420px;
-  overflow-y: auto;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  padding-right: 0.5rem;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
