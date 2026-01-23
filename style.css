@@ -268,7 +268,7 @@ img {
 .social-links {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin: 0 auto;
   padding: 0;
@@ -279,11 +279,17 @@ img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5rem;
-  padding: 1rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  padding: clamp(0.5rem, 2vw, 1rem);
   border-radius: 50%;
   color: var(--primary-pink);
   transition: all 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .social-links {
+    gap: 1rem;
+  }
 }
 
 .social-links a:hover,
@@ -361,7 +367,11 @@ nav a:hover {
   padding: 0;
 }
 
-.scroll-container {
+.scroll-container {@media (max-width: 640px) {
+  .scroll-container {
+    max-height: 300px;
+  }
+}
   max-height: 420px;
   width: 100%;
   overflow-y: scroll;
@@ -397,7 +407,7 @@ nav a:hover {
   color: #f0f4f8;
   text-align: center;
   margin-bottom: 1.5rem;
-  padding: 2rem 1rem;
+  padding: clamp(1rem, 4vw, 2rem) clamp(0.75rem, 3vw, 1rem);
   max-width: 100%;
   border-radius: 12px;
   background: linear-gradient(135deg, rgba(129, 9, 71, 0.2), rgba(61, 0, 37, 0.2));
@@ -419,10 +429,11 @@ nav a:hover {
 
 .card h3 {
   color: var(--primary-pink);
-  margin: 1rem 0;
+  margin: clamp(0.5rem, 2vw, 1rem) 0;
+  font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
 .card p {
   color: #f0f4f8;
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
 }
