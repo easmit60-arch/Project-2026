@@ -30,11 +30,11 @@
   <header>
     <nav aria-label="Main navigation">
       <ul class="nav-list">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -91,29 +91,36 @@
       </section>
 
       <!-- ====== PROJECTS ====== -->
-      <section id="projects" class="section projects" aria-labelledby="projects-heading">
+      <section id="projects" class="section" aria-labelledby="projects-heading">
         <h2 id="projects-heading">Projects</h2>
 
-        <div class="projects-slider" role="list">
-          <div class="project" role="listitem">
-            <a href="https://chinookfund.org/grantee/slutwalk-denver-4000/" target="_blank" rel="noopener noreferrer">
-              <img src="https://chinookfund.org/wp-content/uploads/2025/07/Slutwalk-Denver.jpg" alt="Slutwalk Denver" />
-            </a>
-          </div>
+        <div class="card-container" role="list">
+          <article class="card" role="listitem">
+  <a href="https://chinookfund.org/grantee/slutwalk-denver-4000/" target="_blank" rel="noopener noreferrer">
+    <img src="https://chinookfund.org/wp-content/uploads/2025/07/Slutwalk-Denver.jpg" alt="Slutwalk Denver" style="width:100%;border-radius:10px;margin-bottom:1rem;">
+    <h3>Project One</h3>
+  </a>
+  <p>Short description of the project.</p>
+</article>
 
-          <div class="project" role="listitem">
-            <a href="https://www.lawandsociety.org/2025/12/17/crn-spotlight-sex-work-law-society/" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.lawandsociety.org/wp-content/uploads/2020/07/LSA_Logo_Dark.png" alt="Project Two" />
-            </a>
-          </div>
+          <article class="card" role="listitem">
+  <a href="https://www.lawandsociety.org/2025/12/17/crn-spotlight-sex-work-law-society/" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.lawandsociety.org/wp-content/uploads/2020/07/LSA_Logo_Dark.png" alt="Project Two" style="width:100%;border-radius:10px;margin-bottom:1rem;">
+    <h3>Project Two</h3>
+  </a>
+  <p>Short description of the project.</p>
+</article>
 
-          <div class="project" role="listitem">
-            <a href="https://rougesupportnetwork.org/lysistratacoop" target="_blank" rel="noopener noreferrer">
-              <img src="https://images.squarespace-cdn.com/content/v1/59210e229f745601896d0cdd/be1b871c-5dae-4558-abae-4d06dcdeaea7/cyn.jpg?format=750w" alt="Project Three" />
-            </a>
-          </div>
-        </div>
+          <article class="card" role="listitem">
+  <a href="https://rougesupportnetwork.org/lysistratacoop" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.squarespace-cdn.com/content/v1/59210e229f745601896d0cdd/be1b871c-5dae-4558-abae-4d06dcdeaea7/cyn.jpg?format=750w" alt="Project Three" style="width:100%;border-radius:10px;margin-bottom:1rem;">
+    <h3>Project Three</h3>
+  </a>
+  <p>Short description of the project.</p>
+</article>
+    </div>
       </section>
+    </div>
     <!-- ====== CONTACT ====== -->
     <section id="contact" aria-labelledby="contact-heading" class="contact-section">
       <h2 id="contact-heading">Contact</h2>
@@ -179,18 +186,8 @@
 
   <!-- ====== FOOTER ====== -->
   <footer>
-    <p>Feel free to Google <em>Becky Taha'Blu</em></p>
+    <p>Feel free to Google <em><a href="https://www.google.com/search?q=becky+tahablu&rlz=1C1RXQR_enUS1161US1161&oq=becky+tah&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgcIARAAGIAEMgYIAhBFGDkyBwgDEAAYgAQyBwgEEAAYgAQyCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMgoICRAAGAoYFhge0gEJNjY5M2owajE1qAIIsAIB8QUORa3p7gWklfEFDkWt6e4FpJU&sourceid=chrome&ie=UTF-8">© Becky Taha'Blu Smith</a></em></p>
   </footer>
 
 </body>
 </html>
-
-<style>
-  section {
-  text-align: center;
-  margin: 2rem auto;
-  padding: 2rem 1rem;
-  max-width: 100%;
-  border-radius: 12px;
-}
-</style>

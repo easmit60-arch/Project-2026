@@ -21,8 +21,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffc0e3 0%, #ffb3d9 50%, #ffa6cf 100%);
-  box-shadow: inset 0 0 60px rgba(255, 182, 219, 0.6);
+  background: linear-gradient(135deg, #faf7f9 90%, #ffb3d9 50%, #ffa6cf 10%);
+  box-shadow: inset 0 0 60px rgba(255, 182, 219, 0.436);
   color: #222;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
@@ -30,7 +30,7 @@ body {
 }
 
 html[data-theme="dark"] body {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(135deg, #1a1a2e 10%, #16213e 90%);
   color: #f0f4f8;
 }
 
@@ -78,21 +78,12 @@ section {
 }
 
 .card {
-  background-color: #feaef2;
+  background-color: #fdf7fc;
   padding: 20px;
-  flex: 1 1 280px;
-  max-width: 320px;
+  width: 250px;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 1rem;
 }
 
 .card h3 {
@@ -103,50 +94,6 @@ section {
 .card:focus-within {
   transform: translateY(-5px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
-}
-
-/* Projects section */
-.projects {
-  width: 100%;
-  padding: 40px 0;
-  text-align: center;
-  overflow: hidden;
-}
-
-/* Ensure Projects section spans full width when inside the 3-col info grid */
-.info-grid .projects {
-  grid-column: 1 / -1;
-}
-
-/* Slider container */
-.projects-slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  width: 100vw; /* full-bleed */
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-}
-
-/* Hide scrollbar (optional) */
-.projects-slider::-webkit-scrollbar {
-  display: none;
-}
-
-/* Each project (full-width slides) */
-.project {
-  min-width: 100vw; /* ensure one slide per viewport */
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-}
-
-/* Image styling */
-.project img {
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
 }
 
 #hero {
@@ -193,7 +140,7 @@ footer {
 /* Center all headings */
 h1 {
   font-size: clamp(2rem, 8vw, 3.5rem);
-  background: linear-gradient(90deg, var(--primary-pink), var(--light-pink));
+  background: linear-gradient(90deg, var(--primary-pink), var(--dark-purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -335,7 +282,7 @@ img {
   font-size: 2.5rem;
   padding: 1rem;
   border-radius: 50%;
-  color: var(--dark-pink);
+  color: var(--primary-pink);
   transition: all 0.3s ease;
 }
 
@@ -343,7 +290,7 @@ img {
 .social-links a:focus-visible {
   transform: scale(1.15);
   color: var(--primary-pink);
-  filter: drop-shadow(0 0 8px var(--primary-pink));
+  filter: drop-shadow(0 0 10px var(--primary-pink));
 }
 
 html[data-theme="dark"] .social-links a {
@@ -353,7 +300,7 @@ html[data-theme="dark"] .social-links a {
 html[data-theme="dark"] .social-links a:hover,
 html[data-theme="dark"] .social-links a:focus-visible {
   color: var(--light-pink);
-  filter: drop-shadow(0 0 8px var(--light-pink));
+  filter: drop-shadow(0 0 10px var(--light-pink));
 }
 
 /* Screen-reader-only utilities */
@@ -387,7 +334,7 @@ section {
 }
 
 .accent {
-  color: #c0392b;
+  color: #cf31bf;
 }
 
 /* Navigation layout and hover */
@@ -404,5 +351,56 @@ nav a {
 }
 
 nav a:hover {
-  color: #c0392b;
+  color: var(--primary-pink);
+}
+/* Card Container and Card Styles */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.card {
+  --primary-pink: #ff6bff;
+  --dark-purple: #810947;
+  --deep-purple: #3d0025;
+  --text-dark: #2b1221;
+  --cyan: #00ffff;
+  --tech-blue: #0077c0;
+  --light-pink: #ffbde4;
+  --light-bg: #f0f4f8;
+  --cyan-accent: #00bbde;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #f0f4f8;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(129, 9, 71, 0.2), rgba(61, 0, 37, 0.2));
+  border: 1px solid var(--primary-pink);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 107, 255, 0.3);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card h3 {
+  color: var(--primary-pink);
+  margin: 1rem 0;
+}
+
+.card p {
+  color: #f0f4f8;
+  font-size: 0.95rem;
 }
