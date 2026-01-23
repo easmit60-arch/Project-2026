@@ -355,11 +355,26 @@ nav a:hover {
 }
 /* Card Container and Card Styles */
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
   width: 100%;
   margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+}
+
+.scroll-container {
+  max-height: 420px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  padding-right: 0.5rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--cyan-accent);
+  border-radius: 4px;
 }
 
 .card {
@@ -376,13 +391,15 @@ nav a:hover {
   line-height: 1.6;
   color: #f0f4f8;
   text-align: center;
-  margin: 2rem auto;
+  margin-bottom: 1.5rem;
   padding: 2rem 1rem;
   max-width: 100%;
   border-radius: 12px;
   background: linear-gradient(135deg, rgba(129, 9, 71, 0.2), rgba(61, 0, 37, 0.2));
   border: 1px solid var(--primary-pink);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  flex-shrink: 0;
 }
 
 .card:hover {
