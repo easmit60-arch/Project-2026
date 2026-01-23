@@ -366,15 +366,12 @@ nav a:hover {
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   padding-right: 0.5rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 .scroll-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: var(--cyan-accent);
-  border-radius: 4px;
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .card {
