@@ -363,6 +363,7 @@ nav a:hover {
 
 .scroll-container {
   max-height: 420px;
+  width: 100%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scrollbar-width: none; /* Firefox */
@@ -370,7 +371,15 @@ nav a:hover {
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none !important; /* Chrome, Safari, Opera */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  display: none !important;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  display: none !important;
 }
 
 .card {
