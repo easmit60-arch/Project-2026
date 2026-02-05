@@ -16,11 +16,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome (for social icons) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    crossorigin="anonymous"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Theme detection -->
   <script>
@@ -33,11 +29,13 @@
   <!-- ====== HEADER / NAV ====== -->
   <header>
     <nav aria-label="Main navigation">
-      <ul class="nav-list">
+            <ul class="nav-list">
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-      </ul>
+            </ul>
     </nav>
   </header>
 
@@ -55,59 +53,74 @@
         embodiment, and community care.
       </p>
 
-      <a href="#projects" class="hero-cta">
+      <a href="https://www.linkedin.com/in/becky-taha-blu-06805869/" class="hero-cta">
         View My Work
       </a>
     </section>
 
-    <!-- ====== ABOUT ====== -->
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
+    <div class="info-grid" aria-label="About, Skills, and Projects">
 
-      <p>
-        I am a multidisciplinary artist and activist whose work blends
-        performance, design, and digital storytelling. My practice centers
-        consent, accessibility, and joy as tools for liberation.
-      </p>
+      <!-- ====== ABOUT ====== -->
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
 
-      <p>
-        Through vaudeville, web development, and community organizing,
-        I create spaces where people can be seen, heard, and invited into
-        meaningful connection.
-      </p>
-    </section>
-
-    <!-- ====== SKILLS ====== -->
-    <section id="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-
-      <ul class="skills-list">
-        <li>Semantic HTML & Accessible Markup</li>
-        <li>CSS (Grid, Responsive Design)</li>
-        <li>Visual & Interaction Design</li>
-        <li>Performance & Embodied Storytelling</li>
-        <li>Community Organizing & Facilitation</li>
-      </ul>
-    </section>
-
-    <!-- ====== PROJECTS ====== -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-
-      <article class="project-card">
-        <h3>Project Title</h3>
         <p>
-          Short description of the project, what problem it addressed,
-          and how it reflects your values or skills.
+          I am a multidisciplinary artist and activist whose work blends
+          performance, design, and digital storytelling. My practice centers
+          consent, accessibility, and joy as tools for liberation.
         </p>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          View Project
-        </a>
-      </article>
 
-      <!-- Duplicate project-card for more projects -->
-    </section>
+        <p>
+          Through vaudeville, web development, and community organizing,
+          I create spaces where people can be seen, heard, and invited into
+          meaningful connection.
+        </p>
+      </section>
 
+      <!-- ====== SKILLS ====== -->
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+
+        <ul class="skills-list">
+          <li>Semantic HTML & Accessible Markup</li>
+          <li>CSS (Grid, Responsive Design)</li>
+          <li>Visual & Interaction Design</li>
+          <li>Performance & Embodied Storytelling</li>
+          <li>Community Organizing & Facilitation</li>
+        </ul>
+      </section>
+
+      <!-- ====== PROJECTS ====== -->
+      <section id="projects" class="section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+
+        <ul class="card-container scroll-container">
+          <li class="card">
+            <a href="https://chinookfund.org/grantee/slutwalk-denver-4000/" target="_blank" rel="noopener noreferrer">
+              <img src="https://chinookfund.org/wp-content/uploads/2025/07/Slutwalk-Denver.jpg" alt="Slutwalk Denver" style="width:100%;border-radius:10px;margin-bottom:1rem;">
+              <h3>Project One</h3>
+            </a>
+            <p>Short description of the project.</p>
+          </li>
+
+          <li class="card">
+            <a href="https://www.lawandsociety.org/2025/12/17/crn-spotlight-sex-work-law-society/" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.lawandsociety.org/wp-content/uploads/2020/07/LSA_Logo_Dark.png" alt="Project Two" style="width:100%;border-radius:10px;margin-bottom:1rem;">
+              <h3>Project Two</h3>
+            </a>
+            <p>Short description of the project.</p>
+          </li>
+
+          <li class="card">
+            <a href="https://rougesupportnetwork.org/lysistratacoop" target="_blank" rel="noopener noreferrer">
+              <img src="https://images.squarespace-cdn.com/content/v1/59210e229f745601896d0cdd/be1b871c-5dae-4558-abae-4d06dcdeaea7/cyn.jpg?format=750w" alt="Project Three" style="width:100%;border-radius:10px;margin-bottom:1rem;">
+              <h3>Project Three</h3>
+            </a>
+            <p>Short description of the project.</p>
+          </li>
+        </ul>
+      </section>
+    </div>
     <!-- ====== CONTACT ====== -->
     <section id="contact" aria-labelledby="contact-heading" class="contact-section">
       <h2 id="contact-heading">Contact</h2>
@@ -123,11 +136,11 @@
         <figcaption class="visually-hidden">Profile image used in email signature</figcaption>
       </figure>
 
-      <p>Reach out on social media or email — I typically respond within 2 business days.</p>
+      <p>Reach out on social media or email beckytahablu@outlook.com.</p>
 
       <ul class="social-links" role="list">
         <li>
-          <a href="https://wordpress.org" target="_blank" rel="noopener noreferrer" aria-label="WordPress site">
+          <a href="https://beckytahablu.com/" target="_blank" rel="noopener noreferrer" aria-label="WordPress site">
             <i class="fa-brands fa-wordpress" aria-hidden="true"></i><span class="sr-only">WordPress</span>
           </a>
         </li>
@@ -172,9 +185,27 @@
   </main>
 
   <!-- ====== FOOTER ====== -->
-  <footer>
-    <p>© Becky Taha'Blu Smith</p>
-  </footer>
+ <footer>
+  <p>
+    Feel free to Google 
+    <em>
+      <a
+        href="https://www.google.com/search?q=becky+tahablu"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Search results for Becky Taha'Blu Smith on Google"
+      >
+        © Becky Taha'Blu
+      </a>
+    </em>
+  </p>
+
+  <nav aria-label="Footer navigation">
+    <a href="#about">About</a> ·
+    <a href="#projects">Projects</a> ·
+    <a href="#contact">Contact</a>
+  </nav>
+</footer>
 
   <script src="script.js"></script>
 </body>
